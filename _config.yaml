@@ -1,0 +1,26 @@
+# _config.yml
+
+# Основная информация о сайте
+title: "My Awesome Open Source Project"
+description: "A clear, short description of what my project does and who it's for."
+baseurl: "" # Оставьте пустым, если репозиторий называется username.github.io
+url: "https://your-username.github.io" # Ваш URL
+github_username: your-username
+repository: "your-username/your-repo-name" # Имя репозитория
+
+# Настройки Jekyll
+theme: minima # Можно использовать другую встроенную тему (minima - самая простая)
+plugins:
+  - jekyll-feed
+
+# Настройки для сайта OSS проекта
+header_pages: # Страницы, которые будут в навигации
+  - about.md
+  - docs.md
+
+# Ваши кастомные переменные для легкой смены оформления
+custom:
+  primary_color: "#2563eb"   # Основной синий цвет (для кнопок, ссылок)
+  background_color: "#f8fafc" # Цвет фона
+  text_color: "#1e293b"       # Цвет основного текста
+  accent_color: "#f59e0b"     # Акцентный цвет (для предупреждений, highlights)

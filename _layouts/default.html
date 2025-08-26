@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}
+    </title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+    <!-- Можно добавить свой favicon -->
+    <link rel="icon" href="{{ "/assets/images/logo.svg" | relative_url }}" type="image/svg+xml">
+</head>
+<body>
+    <header class="site-header">
+        <div class="wrapper">
+            <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+            <nav class="site-nav">
+                {% for path in site.header_pages %}
+                    {% assign my_page = site.pages | where: "path", path | first %}
+                    {% if my_page.title %}
+                    <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                    {% endif %}
+                {% endfor %}
+                <a class="page-link" href="{{ site.repository }}">GitHub</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            {{ content }} <!-- Сюда подставляется контент из index.md, about.md и т.д. -->
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrapper">
+            <p>© {{ site.time | date: '%Y' }} {{ site.title }}. 
+                С открытым исходным кодом на <a href="{{ site.repository }}">GitHub</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
