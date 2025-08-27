@@ -3,7 +3,7 @@
 # Основная информация о сайте
 title: "ALM Open Source Project"
 description: "The goal of the project is to create an open source framework for automating calculations in the field of asset and liability management"
-baseurl: "Alminance" # Оставьте пустым, если репозиторий называется alminance.github.io
+baseurl: "" # Оставьте пустым, если репозиторий называется alminance.github.io
 url: "https://alminance.github.io" # Ваш URL
 github_username: alminance
 repository: "alminance/alminance" # Имя репозитория
