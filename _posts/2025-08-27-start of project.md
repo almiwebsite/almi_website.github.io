@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Start of the project"
-date: 2025-28-27
+date: 2025-08-27
 author: "Roman"
 tags: [planning]
 excerpt: "We've started the project."
