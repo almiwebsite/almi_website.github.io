@@ -4,12 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>
-        {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}
-    </title>
+    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-    <!-- Можно добавить свой favicon -->
     <link rel="icon" href="{{ "/assets/images/logo.svg" | relative_url }}" type="image/svg+xml">
 </head>
 <body>
@@ -23,32 +20,32 @@
                     <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
                     {% endif %}
                 {% endfor %}
-                <a class="page-link" href="{{ site.repository }}">GitHub</a>
+                <a class="page-link" href="{{ site.repository }}" target="_blank" rel="noopener">GitHub ↗</a>
             </nav>
         </div>
     </header>
 
     <main class="page-content" aria-label="Content">
         <div class="wrapper">
-            {{ content }} <!-- Сюда подставляется контент из index.md, about.md и т.д. -->
+            {{ content }}
         </div>
     </main>
 
-	<footer class="site-footer">
-		<div class="wrapper">
-			<div class="footer-content">
-				<div class="footer-section">
-					<h3>Contact</h3>
-					<p><a href="mailto:contacts@alminance.com">mailto:contacts@alminance.com</a></p>
-				</div>
-				<div class="footer-section">
-					<h3>Links</h3>
-					<p><a href="{{ site.repository }}">GitHub</a></p>
-					<p><a href="/docs">Documentation</a></p>
-				</div>
-			</div>
-			<p>© {{ site.time | date: '%Y' }} {{ site.title }}. Open source on GitHub.</p>
-		</div>
-	</footer>
+    <footer class="site-footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p><a href="mailto:hello@alminance.com">hello@alminance.com</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <p><a href="{{ site.repository }}">GitHub</a></p>
+                    <p><a href="/blog">Blog</a></p>
+                </div>
+            </div>
+            <p>© {{ site.time | date: '%Y' }} {{ site.title }}. Open source on <a href="{{ site.repository }}">GitHub</a>.</p>
+        </div>
+    </footer>
 </body>
 </html>

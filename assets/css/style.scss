@@ -1,3 +1,187 @@
+---
+---
+
+@import "minima";
+
+// Variables
+$primary-color: {{ site.custom.primary_color }};
+$background-color: {{ site.custom.background_color }};
+$text-color: {{ site.custom.text_color }};
+$accent-color: {{ site.custom.accent_color }};
+
+// General styles
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    color: $text-color;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+// Header
+.site-header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $primary-color;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.page-link {
+    color: $text-color;
+    text-decoration: none;
+    font-weight: 500;
+    
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+// Hero
+.hero {
+    text-align: center;
+    padding: 6rem 1rem 4rem 1rem;
+    background: linear-gradient(135deg, $background-color 0%, #ffffff 100%);
+    
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        color: $text-color;
+    }
+    
+    .hero-description {
+        font-size: 1.3rem;
+        color: lighten($text-color, 20%);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+}
+
+// Features
+.features {
+    padding: 4rem 1rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+        margin: 1rem 0 0.5rem 0;
+        color: $primary-color;
+    }
+    
+    p {
+        color: lighten($text-color, 20%);
+        line-height: 1.5;
+    }
+}
+
+// CTA section
+.cta-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: $background-color;
+    
+    a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: 500;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Buttons
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    
+    &-primary {
+        background: $primary-color;
+        color: white;
+        
+        &:hover {
+            background: darken($primary-color, 10%);
+            transform: translateY(-1px);
+        }
+    }
+    
+    &-secondary {
+        background: transparent;
+        color: $primary-color;
+        border: 2px solid $primary-color;
+        
+        &:hover {
+            background: $primary-color;
+            color: white;
+        }
+    }
+}
+
+// Footer
+.site-footer {
+    background: darken($background-color, 5%);
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+    color: $text-color;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
 // Post styles
 .post {
     max-width: 800px;
@@ -15,26 +199,11 @@
 }
 
 .post-meta {
-    color: #666;
+    color: lighten($text-color, 30%);
     font-size: 0.9rem;
-    margin-bottom: 2rem;
 }
 
-.post-content {
-    line-height: 1.7;
-    
-    h2, h3, h4 {
-        margin-top: 2rem;
-    }
-    
-    img {
-        max-width: 100%;
-        border-radius: 8px;
-        margin: 1.5rem 0;
-    }
-}
-
-// Post list styles
+// Post list
 .posts-list {
     margin: 2rem 0;
 }
@@ -54,7 +223,7 @@
 }
 
 .post-excerpt {
-    color: #666;
+    color: lighten($text-color, 20%);
     margin: 1rem 0;
 }
 
@@ -69,33 +238,30 @@
 }
 
 // Tags
-.post-tags {
-    display: inline-flex;
-    gap: 0.3rem;
-}
-
 .tag {
     background: lighten($primary-color, 40%);
     color: darken($primary-color, 20%);
     padding: 0.2rem 0.6rem;
     border-radius: 12px;
     font-size: 0.8rem;
+    margin: 0 0.2rem;
 }
 
-// Post navigation
-.post-navigation {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #eee;
-}
-
-.prev-post, .next-post {
-    color: $primary-color;
-    text-decoration: none;
+// Responsive
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
     
-    &:hover {
-        text-decoration: underline;
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .site-nav {
+        gap: 1rem;
+    }
+    
+    .feature-grid {
+        grid-template-columns: 1fr;
     }
 }
