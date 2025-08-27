@@ -1,23 +1,42 @@
 ---
 layout: page
-title: О проекте
+title: About
 nav_order: 1
 ---
 
-# О проекте {{ site.title }}
+# About {{ site.title }}
 
-Здесь вы можете рассказать историю создания проекта, его цели и миссию.
+## Our Mission
 
-## Технологии
+We create simple and effective open source Backend frameworks that allow teams in financial institutions to easily create scalable pipelines for calculating asset and liability management models.
 
-*   Язык: Python 3+
-*   Фреймворк: Django
-*   Лицензия: MIT
+## The Problem
 
-## Команда
+A large number of financial organizations develop local solutions in small teams. Our goal is to simplify the development and implementation of complex ALM model calculations in production, increase the flexibility of solutions and reduce the risk of project failures.
 
-Это проект поддерживается энтузиастами со всего мира. Мы всегда рады новой помощи!
+## The Solution
 
-## Лицензия
+{{ site.title }} offers:
+- **Minimalist interface** - only essential features
+- **Flexible workflows** - customizable to your team's processes
+- **Integrations** with popular services
+- **Open source** - transparency and customization possibilities
 
-Этот проект распространяется под лицензией MIT. См. файл `LICENSE` в репозитории.
+## Technologies
+
+- **Backend:** Python 3.11+, FastAPI, PostgreSQL
+
+## Team
+
+The project is developed by a small team of enthusiasts who believe in the power of open source and simple solutions.
+
+## 📧 Contact Us
+
+We'd love to hear from you! Reach out for:
+
+
+**Email:** [contacts@alminance.com](mailto:contacts@alminance.com)  
+
+
+
+

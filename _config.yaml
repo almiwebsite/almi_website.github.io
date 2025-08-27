@@ -1,12 +1,12 @@
 # _config.yml
 
 # Основная информация о сайте
-title: "My Awesome Open Source Project"
-description: "A clear, short description of what my project does and who it's for."
-baseurl: "" # Оставьте пустым, если репозиторий называется username.github.io
-url: "https://your-username.github.io" # Ваш URL
-github_username: your-username
-repository: "your-username/your-repo-name" # Имя репозитория
+title: "ALM Open Source Project"
+description: "The goal of the project is to create an open source framework for automating calculations in the field of asset and liability management"
+baseurl: "Alminance" # Оставьте пустым, если репозиторий называется alminance.github.io
+url: "https://alminance.github.io" # Ваш URL
+github_username: alminance
+repository: "alminance/alminance" # Имя репозитория
 
 # Настройки Jekyll
 theme: minima # Можно использовать другую встроенную тему (minima - самая простая)
@@ -16,7 +16,14 @@ plugins:
 # Настройки для сайта OSS проекта
 header_pages: # Страницы, которые будут в навигации
   - about.md
-  - docs.md
+  - blog.md    # New page
+  - github.md  # New page
+
+# Blog settings
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
 
 # Ваши кастомные переменные для легкой смены оформления
 custom:

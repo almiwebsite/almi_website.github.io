@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,12 +34,21 @@
         </div>
     </main>
 
-    <footer class="site-footer">
-        <div class="wrapper">
-            <p>© {{ site.time | date: '%Y' }} {{ site.title }}. 
-                С открытым исходным кодом на <a href="{{ site.repository }}">GitHub</a>.
-            </p>
-        </div>
-    </footer>
+	<footer class="site-footer">
+		<div class="wrapper">
+			<div class="footer-content">
+				<div class="footer-section">
+					<h3>Contact</h3>
+					<p><a href="mailto:contacts@alminance.com">mailto:contacts@alminance.com</a></p>
+				</div>
+				<div class="footer-section">
+					<h3>Links</h3>
+					<p><a href="{{ site.repository }}">GitHub</a></p>
+					<p><a href="/docs">Documentation</a></p>
+				</div>
+			</div>
+			<p>© {{ site.time | date: '%Y' }} {{ site.title }}. Open source on GitHub.</p>
+		</div>
+	</footer>
 </body>
 </html>
