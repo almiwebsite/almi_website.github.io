@@ -20,7 +20,7 @@
                     <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
                     {% endif %}
                 {% endfor %}
-                <a class="page-link" href="{{ site.repository }}" target="_blank" rel="noopener">GitHub ↗</a>
+              <!--  <a class="page-link" href="{{ site.repository }}" target="_blank" rel="noopener">GitHub ↗</a> -->
             </nav>
         </div>
     </header>
@@ -36,15 +36,15 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Contact</h3>
-                    <p><a href="mailto:hello@alminance.com">hello@alminance.com</a></p>
+                    <p><a href="mailto:contacts@alminance.com">contacts@alminance.com</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>Links</h3>
-                    <p><a href="{{ site.repository }}">GitHub</a></p>
+               <!--     <p><a href="{{ site.repository }}">GitHub</a></p> -->
                     <p><a href="/blog">Blog</a></p>
                 </div>
             </div>
-            <p>© {{ site.time | date: '%Y' }} {{ site.title }}. Open source on <a href="{{ site.repository }}">GitHub</a>.</p>
+            <p>© {{ site.time | date: '%Y' }} {{ site.title }}. <!-- Open source on <a href="{{ site.repository }}">GitHub</a>-->.</p>
         </div>
     </footer>
 </body>

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Alminance
 ---
 
 <section class="hero">
@@ -9,20 +9,6 @@ title: Home
 </section>
 
 <section class="features">
-    <div class="feature-grid">
-        <div class="feature">
-            <h3>🚀 Simple</h3>
-            <p>Easy to install and start using immediately</p>
-        </div>
-        <div class="feature">
-            <h3>🔧 Flexible</h3>
-            <p>Adapts to your team's unique workflow needs</p>
-        </div>
-        <div class="feature">
-            <h3>🤝 Open</h3>
-            <p>Built by the community, for the community</p>
-        </div>
-    </div>
 </section>
 
 <section class="cta-section">
